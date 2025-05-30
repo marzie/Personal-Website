@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marzie Taheri Sanjani - Research & Publications</title>
+    <style>
+        :root {
+            --primary-color: #1a3d66;
+            --secondary-color: #4c7bae;
+            --accent-color: #e2b42c;
+            --light-bg: #f5f7fa;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: var(--light-bg);
+            color: var(--secondary-color);
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem; /* Increased title size */
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+        }
+        
+        h4 {
+            font-size: 1.1rem;
+            margin-top: 1.2rem;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+        }
+        
+        .profile-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .publication {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .publication:last-child {
+            border-bottom: none;
+        }
+        
+        .publication-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .publication-authors {
+            font-style: italic;
+            color: var(--text-light);
+        }
+        
+        .publication-venue {
+            margin-top: 0.3rem;
+        }
+        
+        .publication-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .publication-link:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-icon {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-link {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .skills-section {
+            margin-top: 2rem;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .presentation {
+            margin-bottom: 1rem;
+        }
+        
+        .presentation-title {
+            font-weight: bold;
+        }
+        
+        .presentation-venue {
+            font-style: italic;
+            color: var(--text-light);
+        }
+        
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .education-card {
+            background-color: white;
+            padding: 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .education-degree {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .education-institution {
+            font-style: italic;
+        }
+        
+        .reports-section {
+            margin-top: 2rem;
+        }
+        
+        .policy-mission {
+            margin-bottom: 0.7rem;
+        }
+        
+        .policy-mission a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .policy-mission a:hover {
+            text-decoration: underline;
+        }
+        
+        .mission-icon {
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+        }
+        
+        .mission-category {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin: 1.5rem 0 1rem 0;
+            display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Marzie Taheri Sanjani</h1>
+            <p>Senior Economist at International Monetary Fund</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#policy-reports">Policy Reports</a></li>
+            <li><a href="#speaking">Speaking</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="home" class="container">
+            <div class="profile-section">
+                <img src="/api/placeholder/400/400" alt="Marzie Taheri Sanjani" class="profile-image">
+                <div class="profile-info">
+                    <h2>About Me</h2>
+                    <p>I am a Senior Economist at the International Monetary Fund with expertise in macroeconomic policy, empirical economics, and international finance. My research focuses on financial frictions, output gaps, monetary policy, and nowcasting economic indicators.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <a href="mailto:mtaherisanjani@imf.org">mtaherisanjani@imf.org</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🔗</span>
+                            <a href="https://scholar.google.com/citations?user=s7sRFzgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">👤</span>
+                            <a href="https://linkedin.com/in/marzie-taheri-sanjani-06b4691b/" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-section">
+                        <h3>Research Areas</h3>
+                        <div>
+                            <span class="skill-tag">Macroeconomic Policy</span>
+                            <span class="skill-tag">Empirical Economics</span>
+                            <span class="skill-tag">International Finance</span>
+                            <span class="skill-tag">Monetary Policy</span>
+                            <span class="skill-tag">Financial Sector</span>
+                            <span class="skill-tag">Nowcasting</span>
+                            <span class="skill-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="biography" class="container">
+            <h2>Professional Biography</h2>
+            <p>As a Senior Economist at the International Monetary Fund since 2013, I have extensive experience in international economics and working with governments of low-income, middle-income, and advanced economies. My work involves outreach to authorities of different countries on issues related to macro-finance and I have numerous public speaking experiences at high-level conferences and venues.</p>
+            
+            <p>I have covered a wide range of economic issues including international accounts and balance of payment, monetary policy, financial sector supervision, labor market, budget and fiscal outlook, corporate and household economic activities, and real estate market analysis for both commercial and residential sectors.</p>
+            
+            <p>I've led several research projects for the IMF including Nowcasting, Output Gap and monetary policy, and drivers of inflation. Prior to my current role, I completed doctoral internships at the International Monetary Fund, Norwegian Central Bank, and Minneapolis Federal Reserve Bank.</p>
+            
+            <p>In 2015, I received the Big Data Contest Award ($50k) for proposing, designing, and building an advanced semantic search and browse tool that deploys state-of-the-art word-embedding technology to find relevant papers, authors, and concepts.</p>
+        </section>
+        
+        <section id="education" class="container">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-degree">Ph.D., Economics</div>
+                    <div class="education-institution">London Business School, 2011‐2013</div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-degree">M.Re., Economics</div>
+                    <div class="education-institution">London Business School, 2009‐2011</div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-degree">M.Sc., Electrical and System Engineering</div>
+                    <div class="education-institution">University of Pennsylvania, 2007‐2009</div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-degree">B.Sc., Electrical and Computer Engineering</div>
+                    <div class="education-institution">University of Tehran, 2003‐2007</div>
+                    <p>Ranked 8 out of 486,000 in Iran Nationwide Entrance Exam</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="research" class="container">
+            <h2>Research Focus</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Monetary Policy & Financial Frictions</h3>
+                        <p>Examining the interplay between monetary policy trade-offs and financial frictions, with implications for central bank decision-making.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Nowcasting Economic Indicators</h3>
+                        <p>Developing advanced models for nowcasting GDP and other economic indicators using machine learning and novel data sources.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Output Gaps</h3>
+                        <p>Investigating financial factors and their implications for output gaps, especially during financial "booms and busts".</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Phillips Curve Analysis</h3>
+                        <p>Analyzing the stability and dynamics of the Phillips Curve, particularly following global financial crises.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="publications" class="container">
+            <h2>Selected Publications</h2>
+            
+            <h3>Journal Publication</h3>
+            <div class="publication">
+                <div class="publication-title">Output gap, monetary policy trade‐offs, and financial frictions</div>
+                <div class="publication-authors">Furlanetto, Gelain and Taheri Sanjani (July 2021)</div>
+                <div class="publication-venue">Review of Economic Dynamics Vol. 4, page 52‐70</div>
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S1094202520300594" class="publication-link" target="_blank">View Publication</a>
+            </div>
+            
+            <h3>IMF Working Papers (Selected)</h3>
+            <div class="publication">
+                <div class="publication-title">Nowcasting GDP ‐ A Scalable Approach Using DFM, Machine Learning and Novel Data, Applied to European Economies</div>
+                <div class="publication-authors">IMF Working Paper No. 2022/052</div>
+                <a href="https://bit.ly/3ylyQL0" class="publication-link" target="_blank">View Paper</a>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Did the global crisis break the US Philips Curve?</div>
+                <div class="publication-authors">IMF Working Paper No.16/126</div>
+                <a href="https://goo.gl/S6sXCv" class="publication-link" target="_blank">View Paper</a>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Financial Frictions in the Data: Evidence and Impact</div>
+                <div class="publication-authors">IMF Working Paper No. 14/238</div>
+                <a href="https://goo.gl/EteXGL" class="publication-link" target="_blank">View Paper</a>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Financial Factors: Implication for Output Gaps</div>
+                <div class="publication-authors">IMF Working Paper No. 15/153</div>
+                <a href="https://goo.gl/bfq2Nh" class="publication-link" target="_blank">View Paper</a>
+            </div>
+            
+            <h3>Engineering Research</h3>
+            <div class="publication">
+                <div class="publication-title">Gravimetric Chemical Sensor Based on the Direct Integration of SWNTs on AlN Contour‐Mode MEMS Resonators</div>
+                <div class="publication-authors">Rinaldi, Zuniga, Sinha, Taheri, Khamis, Johnson, and Piazza</div>
+                <div class="publication-venue">IEEE International Frequency Control Symposium 2008</div>
+                <a href="https://bit.ly/2TR8yPu" class="publication-link" target="_blank">View Publication</a>
+            </div>
+        </section>
+        
+        <section id="policy-reports" class="container">
+            <h2>IMF Policy Reports</h2>
+            <p>Contributed in the annual policy consultation missions and lending program policy missions:</p>
+            
+            <div class="reports-section">
+                <div class="mission-category">
+                    <span class="mission-icon">🧭</span> Article IV Consultation Missions
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/News/Articles/2024/02/20/morocco-2024-article-iv-consultation-press-release" target="_blank">Morocco: 2024 Article IV Consultation – Press Release</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2023/03/15/Poland-2023-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-532556" target="_blank">Poland: 2023 Article IV Consultation – Staff Report and Press Release</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2022/05/10/Ireland-2022-Article-IV-Consultation-Press-Release-and-Staff-Report-518713" target="_blank">Ireland: 2022 Article IV Consultation – Press Release and Staff Report</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2021/06/30/Ireland-2021-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-461614" target="_blank">Ireland: 2021 Article IV Consultation – Press Release and Staff Report</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2021/03/29/Poland-2021-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-503156" target="_blank">Poland: 2021 Article IV Consultation – Press Release and Staff Report</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2020/03/10/Poland-2020-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-49269" target="_blank">Poland: 2020 Article IV Consultation – Press Release and Staff Report</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2018/07/09/Montenegro-2018-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-46086" target="_blank">Montenegro: 2018 Article IV Consultation – Press Release and Staff Report</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2018/07/25/Russian-Federation-2018-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-46143" target="_blank">Russia: 2018 Article IV Consultation – Press Release and Staff Report</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2017/07/19/Russian-Federation-2017-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-45151" target="_blank">Russia: 2017 Article IV Consultation – Press Release and Staff Report</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2015/12/31/The-Gambia-2015-Article-IV-Consultation-and-Request-for-a-Staff-Monitored-Program-43528" target="_blank">The Gambia: 2015 Article IV Consultation and Staff Monitored Program</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2014/10/24/Former-Yugoslav-Republic-of-Macedonia-2014-Article-IV-Consultation-Staff-Report-and-Statement-42164" target="_blank">Former Yugoslav Republic of Macedonia: 2014 Article IV Consultation and Third Post-Program Monitoring</a>
+                </div>
+                
+                <div class="mission-category">
+                    <span class="mission-icon">💸</span> Lending Program Policy Missions
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2023/07/19/Morocco-Request-for-an-Arrangement-Under-the-Resilience-and-Sustainability-Facility-537012" target="_blank">Morocco: Request for an Arrangement under the Resilience and Sustainability Facility (RSF)</a>
+                </div>
+                
+                <div class="policy-mission">
+                    <a href="https://www.imf.org/en/Publications/CR/Issues/2024/03/12/Morocco-Review-of-the-Arrangement-Under-the-RSF-and-Article-IV-Consultation-Press-Release-541157" target="_blank">Morocco: Review of the RSF Arrangement and 2024 Article IV Consultation – Press Release and Staff Report</a>
+                </div>
+            </div>
+            
+            <h3>Other Selected Policy Reports</h3>
+            
+            <div class="publication">
+                <div class="publication-title">"Long‐term growth prospects and the output gap in Montenegro"</div>
+                <div class="publication-authors">Montenegro AIV Selected issue paper, 2018</div>
+                <a href="https://goo.gl/KAYGp4" class="publication-link" target="_blank">View Report</a>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">"Putting the curve back on Russia Phillips curve"</div>
+                <div class="publication-authors">Russia AIV Selected issue paper, 2017</div>
+                <a href="https://goo.gl/z6xVLM" class="publication-link" target="_blank">View Report</a>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Box 3.1. World Economic Outlook, April 2015: Uneven Growth</div>
+                <a href="http://goo.gl/1YoRRQ" class="publication-link" target="_blank">View Report</a>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Balance Sheet Analysis in Fund Surveillance</div>
+                <div class="publication-authors">Board Paper 2015</div>
+                <a href="https://goo.gl/qJXfWm" class="publication-link" target="_blank">View Report</a>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Monetary Policy and Financial Stability</div>
+                <div class="publication-authors">Board Paper 2015</div>
+                <a href="https://goo.gl/zFmjLN" class="publication-link" target="_blank">View Report</a>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Remittances and Economic Development in FYR Macedonia</div>
+                <div class="publication-authors">Selected Issue Paper 14/232, 2014</div>
+                <a href="https://goo.gl/KRlovd" class="publication-link" target="_blank">View Report</a>
+            </div>
+        </section>
+        
+        <section id="speaking" class="container">
+            <h2>Public Speaking</h2>
+            
+            <div class="presentation">
+                <div class="presentation-title">"Output Gap, Monetary Policy Trade-offs and Financial Frictions"</div>
+                <div class="presentation-venue">American Economic Association (2018), Southern Economic Association (2018), Norwegian Central Bank (2013)</div>
+            </div>
+            
+            <div class="presentation">
+                <div class="presentation-title">"Cognitive Q&A machine, Sherlock"</div>
+                <div class="presentation-venue">Text Analytics Forum, 2018</div>
+            </div>
+            
+            <div class="presentation">
+                <div class="presentation-title">"Big data in policy design"</div>
+                <div class="presentation-venue">Analytical corner of IMF spring meetings, 2017</div>
+                <a href="https://bit.ly/2UD3Bdn" class="publication-link" target="_blank">View Presentation</a>
+            </div>
+            
+            <div class="presentation">
+                <div class="presentation-title">"Did the global crisis break the US Philips Curve?"</div>
+                <div class="presentation-venue">International Applied Econometrics Annual conference, 2016</div>
+            </div>
+            
+            <div class="presentation">
+                <div class="presentation-title">"Financial Factors: Implication for Output Gaps"</div>
+                <div class="presentation-venue">XVII Annual Inflation Targeting Seminar, SED 2015, Empirical Macro, Bank of International Settlement, European Central Bank, Federal Reserve Board of Governors, Norges Bank, London Business School</div>
+                <a href="https://bit.ly/3lxKgE5" class="publication-link" target="_blank">View Presentation</a>
+            </div>
+            
+            <div class="presentation">
+                <div class="presentation-title">"Financial frictions and sources of the business cycle"</div>
+                <div class="presentation-venue">TADC conference London Business School (May 2011), Minneapolis Federal Reserve (Oct 2011), Hand Economics Forum MIT (Sept 2011), Norges Bank (May 2012), University of Oslo (May 2012), Research Department of the International Monetary Fund (Sept 2012)</div>
+            </div>
+            
+            <div class="presentation">
+                <div class="presentation-title">"Growth transitions and their determinants in advanced economies"</div>
+                <div class="presentation-venue">European Department of the International Monetary Fund (Aug 2012), Norges Bank (Oct 2012), London Business School (Nov 2012)</div>
+            </div>
+        </section>
+        
+        <section id="contact" class="container">
+            <h2>Contact Information</h2>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Email</h3>
+                        <p><strong>Work:</strong> <a href="mailto:mtaherisanjani@imf.org">mtaherisanjani@imf.org</a></p>
+                        <p><strong>Personal:</strong> <a href="mailto:marzieh.taheri@gmail.com">marzieh.taheri@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Professional Profiles</h3>
+                        <p><a href="https://scholar.google.com/citations?user=s7sRFzgAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+                        <p><a href="https://linkedin.com/in/marzie-taheri-sanjani-06b4691b/" target="_blank">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Marzie Taheri Sanjani. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=s7sRFzgAAAAJ&hl=en" class="social-link" target="_blank">🎓</a>
+                <a href="https://linkedin.com/in/marzie-taheri-sanjani-06b4691b/" class="social-link" target="_blank">👤</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
